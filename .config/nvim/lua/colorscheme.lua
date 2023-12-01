@@ -31,6 +31,24 @@ local colorschemes = {
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
+	["gruvbox"] = {
+		"ellisonleao/gruvbox.nvim",
+		name = "gruvbox",
+		priority = 1000,
+		config = function()
+			require("gruvbox").setup({
+				bold = false,
+				italic = {
+					folds = false,
+					strings = false,
+					comments = false,
+					emphasis = false,
+					operators = false,
+				},
+			})
+			vim.cmd.colorscheme("gruvbox")
+		end,
+	},
 }
 
 return colorschemes[GLOBAL_COLORSCHEME]
