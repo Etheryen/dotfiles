@@ -1,7 +1,8 @@
 # `/home/etheryen/dotfiles`
 
 My config and alla that.
-Run this:
+
+Run this in `~/dotfiles`:
 
 ```sh
 stow .
