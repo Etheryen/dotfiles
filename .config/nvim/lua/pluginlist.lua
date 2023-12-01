@@ -116,6 +116,12 @@ return {
 				},
 				lualine_c = { { "filename", padding = 2 } },
 				lualine_x = {
+					-- TODO: check if it actuall works
+					{
+						require("lazy.status").updates,
+						cond = require("lazy.status").has_updates,
+						color = { fg = "#ff9e64" },
+					},
 					{ "encoding", padding = 2 },
 					{ "fileformat", padding = 2 },
 					{ "filetype", padding = 2 },

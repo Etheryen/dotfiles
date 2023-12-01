@@ -18,6 +18,10 @@ local opts = {
 	install = {
 		colorscheme = { GLOBAL_COLORSCHEME, "habamax" },
 	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
 	change_detection = {
 		notify = false,
 	},

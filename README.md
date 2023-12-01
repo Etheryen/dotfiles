@@ -5,5 +5,5 @@ My config and alla that.
 Run this in `~/dotfiles`:
 
 ```sh
-stow .
+stow . -v
 ```
