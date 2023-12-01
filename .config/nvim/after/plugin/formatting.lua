@@ -24,4 +24,4 @@ conform.setup({
 
 vim.keymap.set("n", "<leader>mp", function()
 	conform.format(formatOptions)
-end, { desc = "Format file or range (in visual mode)" })
+end, { desc = "Format file or range" })
