@@ -53,110 +53,15 @@ return {
 
 	-- Useful plugin to show you pending keybinds.
 	{ "folke/which-key.nvim", opts = {} },
-	{
-		-- Adds git related signs to the gutter, as well as utilities for managing changes
-		"lewis6991/gitsigns.nvim",
-		opts = {
-			-- See `:help gitsigns.txt`
-			signs = {
-				add = { text = "+" },
-				change = { text = "~" },
-				delete = { text = "_" },
-				topdelete = { text = "‾" },
-				changedelete = { text = "~" },
-			},
-			on_attach = function(bufnr)
-				vim.keymap.set(
-					"n",
-					"<leader>hp",
-					require("gitsigns").preview_hunk,
-					{ buffer = bufnr, desc = "Preview git hunk" }
-				)
 
-				-- don't override the built-in and fugitive keymaps
-				local gs = package.loaded.gitsigns
-				vim.keymap.set({ "n", "v" }, "]c", function()
-					if vim.wo.diff then
-						return "]c"
-					end
-					vim.schedule(function()
-						gs.next_hunk()
-					end)
-					return "<Ignore>"
-				end, { expr = true, buffer = bufnr, desc = "Jump to next hunk" })
-				vim.keymap.set({ "n", "v" }, "[c", function()
-					if vim.wo.diff then
-						return "[c"
-					end
-					vim.schedule(function()
-						gs.prev_hunk()
-					end)
-					return "<Ignore>"
-				end, { expr = true, buffer = bufnr, desc = "Jump to previous hunk" })
-			end,
-		},
-	},
+	-- Adds git related signs to the gutter, as well as utilities for managing changes
+	"lewis6991/gitsigns.nvim",
 
-	{
-		-- Set lualine as statusline
-		"nvim-lualine/lualine.nvim",
-		-- See `:help lualine.txt`
-		opts = {
-			-- options = {
-			-- 	component_separators = { left = "", right = "" },
-			-- 	section_separators = { left = "", right = "" },
-			-- },
-			extensions = { "lazy" },
-			sections = {
-				lualine_a = { { "mode", padding = 2 } },
-				lualine_b = {
-					{ "branch", padding = 2 },
-					{ "diff", padding = 2 },
-					{ "diagnostics", padding = 2 },
-				},
-				lualine_c = { { "filename", padding = 2 } },
-				lualine_x = {
-					-- TODO: check if it actuall works
-					{
-						require("lazy.status").updates,
-						cond = require("lazy.status").has_updates,
-						color = { fg = "#ff9e64" },
-					},
-					{ "encoding", padding = 2 },
-					{ "fileformat", padding = 2 },
-					{ "filetype", padding = 2 },
-				},
-				lualine_y = { { "progress", padding = 2 } },
-				lualine_z = { { "location", padding = 2 } },
-			},
-		},
-	},
+	-- Set lualine as statusline
+	"nvim-lualine/lualine.nvim",
 
-	{
-		-- Add indentation guides even on blank lines
-		"lukas-reineke/indent-blankline.nvim",
-		-- Enable `lukas-reineke/indent-blankline.nvim`
-		-- See `:help ibl`
-		main = "ibl",
-		config = function()
-			-- COLORS MADE TO FIT rose-pine
-			local hooks = require("ibl.hooks")
-			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-				vim.api.nvim_set_hl(0, "RosePineIndentColor", { fg = "#26233a" })
-				vim.api.nvim_set_hl(0, "RosePineIndentColorScope", { fg = "#524f67" })
-			end)
-
-			require("ibl").setup({
-				indent = {
-					-- 	-- char = "▏",
-					highlight = "RosePineIndentColor",
-				},
-				scope = {
-					highlight = "RosePineIndentColorScope",
-				},
-			})
-		end,
-	},
+	-- Add indentation guides even on blank lines
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl" },
 
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
@@ -231,16 +136,8 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		lazy = false,
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
-		},
-		opts = {
-			actions = {
-				open_file = {
-					quit_on_open = true,
-				},
-			},
 		},
 	},
 
