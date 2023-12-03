@@ -95,7 +95,9 @@ return {
 			"nvim-treesitter/nvim-treesitter-context",
 		},
 		config = function()
-			vim.api.nvim_set_hl(0, "TreesitterContext", { fg = "#191724" })
+			if GLOBAL_COLORSCHEME == "rose-pine" then
+				vim.api.nvim_set_hl(0, "TreesitterContext", { fg = "#191724" })
+			end
 		end,
 		build = ":TSUpdate",
 	},
