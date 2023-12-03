@@ -92,7 +92,11 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
+			"nvim-treesitter/nvim-treesitter-context",
 		},
+		config = function()
+			vim.api.nvim_set_hl(0, "TreesitterContext", { fg = "#191724" })
+		end,
 		build = ":TSUpdate",
 	},
 
