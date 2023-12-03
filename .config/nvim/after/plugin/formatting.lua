@@ -14,6 +14,7 @@ conform.setup({
 		html = { "prettierd" },
 		css = { "prettierd" },
 		json = { "prettierd" },
+		jsonc = { "prettierd" },
 		yaml = { "prettierd" },
 		graphql = { "prettierd" },
 		markdown = { "prettierd" },

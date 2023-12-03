@@ -60,13 +60,13 @@ local servers = {
 	-- clangd = {},
 	-- gopls = {},
 	-- pyright = {},
-	-- rust_analyzer = {},
 	html = { filetypes = { "html", "twig", "hbs" } },
 	tsserver = {},
 	cssls = {},
 	tailwindcss = {},
 	emmet_ls = {},
 	prismals = {},
+	rust_analyzer = {},
 
 	lua_ls = {
 		Lua = {

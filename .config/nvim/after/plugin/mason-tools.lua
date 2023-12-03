@@ -3,5 +3,6 @@ require("mason-tool-installer").setup({
 		"prettierd",
 		"stylua",
 		"eslint_d",
+		"codespell",
 	},
 })
