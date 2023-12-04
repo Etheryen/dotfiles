@@ -58,7 +58,7 @@ return {
 	"lewis6991/gitsigns.nvim",
 
 	-- Set lualine as statusline
-	"nvim-lualine/lualine.nvim",
+	{ "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
 
 	-- Add indentation guides even on blank lines
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl" },
@@ -137,14 +137,18 @@ return {
 		opts = {},
 	},
 
-	"nvim-tree/nvim-web-devicons",
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	version = "*",
+	-- 	dependencies = {
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- },
 
 	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
+		"stevearc/oil.nvim",
+		-- Optional dependencies
+		-- dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 
 	{
@@ -152,6 +156,12 @@ return {
 		event = { "BufRead Cargo.toml" },
 		tag = "stable",
 		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+
+	{
+		"simrat39/rust-tools.nvim",
+		dependencies = "neovim/nvim-lspconfig",
+		ft = "rust",
 	},
 
 	require("colorscheme"),

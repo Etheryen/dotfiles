@@ -100,3 +100,8 @@ mason_lspconfig.setup_handlers({
 		})
 	end,
 })
+
+LSP_EXPORT = {
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
