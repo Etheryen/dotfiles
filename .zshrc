@@ -123,7 +123,7 @@ esac
 # pnpm end
 
 # Fix git fd 14 issue
-# unset ZSH_AUTOSUGGEST_USE_ASYNC
+unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 # Custom aliases
 alias vim=nvim
