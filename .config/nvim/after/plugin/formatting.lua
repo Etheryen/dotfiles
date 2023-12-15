@@ -6,6 +6,12 @@ local formatOptions = {
 }
 
 conform.setup({
+	formatters = {
+		golines = {
+			prepend_args = { "-m", "80" },
+		},
+	},
+
 	formatters_by_ft = {
 		typescript = { "prettierd" },
 		typescriptreact = { "prettierd" },
@@ -18,6 +24,10 @@ conform.setup({
 		yaml = { "prettierd" },
 		graphql = { "prettierd" },
 		markdown = { "prettierd" },
+		go = {
+			"gofumpt",
+			"golines",
+		},
 		lua = { "stylua" },
 	},
 	format_on_save = formatOptions,

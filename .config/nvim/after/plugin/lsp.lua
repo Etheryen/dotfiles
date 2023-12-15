@@ -58,7 +58,6 @@ require("mason-lspconfig").setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
 	-- clangd = {},
-	-- gopls = {},
 	-- pyright = {},
 	html = { filetypes = { "html", "twig", "hbs" } },
 	tsserver = {},
@@ -68,7 +67,14 @@ local servers = {
 	prismals = {},
 	rust_analyzer = {},
 	taplo = {},
-
+	gopls = {
+		filetypes = { "go", "gomod", "gowork", "gotmpl" },
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = { unusedparams = true },
+		},
+	},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },

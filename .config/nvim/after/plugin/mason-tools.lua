@@ -4,5 +4,7 @@ require("mason-tool-installer").setup({
 		"stylua",
 		"eslint_d",
 		"codespell",
+		"gofumpt",
+		"golines",
 	},
 })
