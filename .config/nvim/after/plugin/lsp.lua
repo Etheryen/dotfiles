@@ -67,6 +67,7 @@ local servers = {
 	emmet_ls = {},
 	prismals = {},
 	rust_analyzer = {},
+	taplo = {},
 
 	lua_ls = {
 		Lua = {

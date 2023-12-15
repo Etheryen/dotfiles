@@ -172,7 +172,7 @@ return {
 				TODO = { icon = " ", color = "info", alt = { "todo" } },
 			},
 			highlight = {
-				pattern = [[.*<(KEYWORDS)(\s*:|.*;)]], -- pattern or table of patterns, used for highlighting (vim regex)
+				pattern = [[.*<(KEYWORDS)(\s*:|.*)]], -- pattern or table of patterns, used for highlighting (vim regex)
 				comments_only = false, -- uses treesitter to match keywords in comments only
 			},
 		},
