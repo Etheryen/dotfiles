@@ -128,8 +128,9 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 # Custom aliases
 alias vim=nvim
 alias cat="bat --paging=never"
-alias ls="exa --icons --git"
-alias ll="exa -a -l -g --icons --git"
-alias llt="exa -1 --icons --tree --git-ignore"
+alias ls="eza --icons --git"
+alias ll="eza -a -l --icons --git --git-repos"
+alias l=ll
+alias llt="eza -1 --icons --tree --git-ignore"
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
