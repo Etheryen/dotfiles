@@ -1,5 +1,5 @@
 -- List of available colorschemes in lua/colorscheme.lua
-GLOBAL_COLORSCHEME = "rose-pine"
+GLOBAL_COLORSCHEME = "onedark"
 
 require("options")
 require("plugins")

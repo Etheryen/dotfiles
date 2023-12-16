@@ -45,8 +45,11 @@ local colorschemes = {
 					emphasis = false,
 					operators = false,
 				},
+				overrides = {
+					SignColumn = { bg = "#282828" },
+				},
 			})
-			vim.o.background = "dark"
+			-- vim.o.background = "dark"
 			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
@@ -65,6 +68,28 @@ local colorschemes = {
 				},
 			})
 			vim.cmd.colorscheme("onedark")
+		end,
+	},
+	["kanagawa"] = {
+		"rebelot/kanagawa.nvim",
+		name = "kanagawa",
+		priority = 1000,
+		config = function()
+			require("kanagawa").setup({
+				commentStyle = { italic = false },
+				keywordStyle = { italic = false },
+				statementStyle = { bold = false },
+				colors = {
+					theme = {
+						wave = {
+							ui = {
+								bg_gutter = "none",
+							},
+						},
+					},
+				},
+			})
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 }
