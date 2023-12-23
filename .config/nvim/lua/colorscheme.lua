@@ -49,7 +49,7 @@ local colorschemes = {
 					SignColumn = { bg = "#282828" },
 				},
 			})
-			-- vim.o.background = "dark"
+			vim.o.background = "dark"
 			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
@@ -90,6 +90,15 @@ local colorschemes = {
 				},
 			})
 			vim.cmd.colorscheme("kanagawa")
+		end,
+	},
+	["github"] = {
+		"projekt0n/github-nvim-theme",
+		name = "github-theme",
+		priority = 1000,
+		config = function()
+			require("github-theme").setup({})
+			vim.cmd.colorscheme("github_dark_default")
 		end,
 	},
 }

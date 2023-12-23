@@ -6,5 +6,6 @@ require("mason-tool-installer").setup({
 		"codespell",
 		"gofumpt",
 		"golines",
+		"golangci-lint",
 	},
 })

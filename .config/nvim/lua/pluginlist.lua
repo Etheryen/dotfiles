@@ -164,19 +164,23 @@ return {
 		ft = "rust",
 	},
 
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {
-			keywords = {
-				TODO = { icon = " ", color = "info", alt = { "todo" } },
-			},
-			highlight = {
-				pattern = [[.*<(KEYWORDS)(\s*:|.*)]], -- pattern or table of patterns, used for highlighting (vim regex)
-				comments_only = false, -- uses treesitter to match keywords in comments only
-			},
-		},
-	},
+	-- {
+	-- 	"folke/todo-comments.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- 	opts = {
+	-- 		keywords = {
+	-- 			TODO = { icon = " ", color = "info", alt = { "todo" } },
+	-- 		},
+	-- 		highlight = {
+	-- 			pattern = [[.*<(KEYWORDS)(\s*:|.*\))]], -- pattern or table of patterns, used for highlighting (vim regex)
+	-- 			comments_only = false, -- uses treesitter to match keywords in comments only
+	-- 		},
+	-- 	},
+	-- },
+
+	"christoomey/vim-tmux-navigator",
+
+	{ "simrat39/inlay-hints.nvim", opts = {} },
 
 	require("colorscheme"),
 }

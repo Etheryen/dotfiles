@@ -72,7 +72,22 @@ local servers = {
 		gopls = {
 			completeUnimported = true,
 			usePlaceholders = true,
-			analyses = { unusedparams = true },
+			analyses = {
+				unusedparams = true,
+				shadow = true,
+				unusedwrite = true,
+				useany = true,
+				unusedvariable = true,
+			},
+			hints = {
+				assignVariableTypes = true,
+				compositeLiteralFields = true,
+				compositeLiteralTypes = true,
+				constantValues = true,
+				functionTypeParameters = true,
+				parameterNames = true,
+				rangeVariableTypes = true,
+			},
 		},
 	},
 	lua_ls = {
@@ -97,11 +112,30 @@ mason_lspconfig.setup({
 	ensure_installed = vim.tbl_keys(servers),
 })
 
+local function has_value(tab, val)
+	for _, value in ipairs(tab) do
+		if value == val then
+			return true
+		end
+	end
+
+	return false
+end
+
+local ih_servers = {
+	-- "gopls",
+}
+
 mason_lspconfig.setup_handlers({
 	function(server_name)
 		require("lspconfig")[server_name].setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = function(c, b)
+				on_attach(c, b)
+				if has_value(ih_servers, server_name) then
+					require("inlay-hints").on_attach(c, b)
+				end
+			end,
 			settings = servers[server_name],
 			filetypes = (servers[server_name] or {}).filetypes,
 		})
