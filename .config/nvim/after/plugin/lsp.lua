@@ -90,6 +90,7 @@ local servers = {
 			},
 		},
 	},
+	powershell_es = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },

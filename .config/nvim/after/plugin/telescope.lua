@@ -8,7 +8,7 @@ require("telescope").setup({
 				["<C-d>"] = false,
 			},
 		},
-		file_ignore_patterns = { "target", "tmp" },
+		file_ignore_patterns = { "target", "tmp", "vendor" },
 	},
 })
 

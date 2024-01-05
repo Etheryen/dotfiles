@@ -134,3 +134,4 @@ alias l=ll
 alias llt="eza -1 --icons --tree --git-ignore"
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
+alias u="sudo dnf update -y"
