@@ -135,3 +135,6 @@ alias llt="eza -1 --icons --tree --git-ignore"
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias u="sudo dnf update -y"
+alias hollywood="docker run --rm -it bcbcarl/hollywood"
+
+alias bills="sum-bills-go --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
