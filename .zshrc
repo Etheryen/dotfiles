@@ -138,3 +138,4 @@ alias u="sudo dnf update -y"
 alias hollywood="docker run --rm -it bcbcarl/hollywood"
 
 alias bills="sum-bills-go --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
+alias bills-awk="awk -F zł '{ sum += \$1 }; END { print \"Sum is \" sum \"zł\" }' ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"

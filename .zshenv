@@ -6,4 +6,4 @@ export EDITOR="/usr/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 . "$HOME/.cargo/env"
 
-export PATH=$PATH:$GOPATH/bin:$HOME/apps/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/apps/bin:/usr/local/go/bin
