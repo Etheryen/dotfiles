@@ -13,6 +13,7 @@ vim.defer_fn(function()
 			"rust",
 			"tsx",
 			"javascript",
+			"jsdoc",
 			"typescript",
 			"vimdoc",
 			"vim",

@@ -2,7 +2,7 @@ local conform = require("conform")
 
 local formatOptions = {
 	lsp_fallback = true,
-	timeout_ms = 500,
+	timeout_ms = 750,
 }
 
 conform.setup({

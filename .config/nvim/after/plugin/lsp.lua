@@ -60,7 +60,10 @@ local servers = {
 	-- clangd = {},
 	-- pyright = {},
 	html = { filetypes = { "html", "twig", "hbs" } },
-	tsserver = {},
+	ts_ls = { implicitProjectConfiguration = {
+		allowJs = true,
+		checkJs = true,
+	} },
 	cssls = {},
 	tailwindcss = {},
 	emmet_ls = {},
