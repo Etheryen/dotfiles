@@ -65,7 +65,7 @@ local servers = {
 		checkJs = true,
 	} },
 	cssls = {},
-	tailwindcss = {},
+	tailwindcss = { filetypes = { "html" } },
 	emmet_ls = {},
 	prismals = {},
 	rust_analyzer = {},
@@ -94,6 +94,16 @@ local servers = {
 		},
 	},
 	powershell_es = {},
+	jdtls = {
+		-- java = {
+		-- 	format = {
+		-- 		settings = {
+		-- 			url = "/home/etheryen/.config/nvim/intellij-java-google-style.xml",
+		-- 			profile = "GoogleStyle",
+		-- 		},
+		-- 	},
+		-- },
+	},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
@@ -132,6 +142,16 @@ local ih_servers = {
 
 mason_lspconfig.setup_handlers({
 	function(server_name)
+		-- if server_name == "jdtls" then
+		-- 	require("lspconfig").jdtls.setup({
+		-- 		cmd = { "jdtls" },
+		-- 		root_dir = function(fname)
+		-- 			return require("lspconfig.util").root_pattern(".git", "pom.xml", "build.gradle")(fname)
+		-- 				or require("lspconfig.util").path.dirname(fname)
+		-- 		end,
+		-- 	})
+		-- 	return
+		-- end
 		require("lspconfig")[server_name].setup({
 			capabilities = capabilities,
 			on_attach = function(c, b)

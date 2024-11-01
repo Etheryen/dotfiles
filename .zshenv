@@ -1,3 +1,5 @@
+export JAVA_HOME="/etc/alternatives/jre"
+
 export GOPATH=$(go env GOPATH)
 export GOBIN=$(go env GOBIN)
 

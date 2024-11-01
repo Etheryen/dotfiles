@@ -62,3 +62,7 @@ alias hollywood="docker run --rm -it bcbcarl/hollywood"
 
 alias bills="sum-bills-go --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
 alias bills-awk="awk -F zł '{ sum += \$1 }; END { print \"Sum is \" sum \"zł\" }' ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

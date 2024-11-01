@@ -80,4 +80,5 @@ vim.defer_fn(function()
 			},
 		},
 	})
+	require("tree-sitter-just").setup({})
 end, 0)

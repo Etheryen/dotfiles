@@ -116,6 +116,8 @@ return {
 	--    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
 	-- { import = 'custom.plugins' },
 
+	"IndianBoy42/tree-sitter-just",
+
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },

@@ -2,7 +2,7 @@ local conform = require("conform")
 
 local formatOptions = {
 	lsp_fallback = true,
-	timeout_ms = 750,
+	timeout_ms = 1000,
 }
 
 conform.setup({
@@ -24,10 +24,7 @@ conform.setup({
 		yaml = { "prettierd" },
 		graphql = { "prettierd" },
 		markdown = { "prettierd" },
-		go = {
-			"gofumpt",
-			"golines",
-		},
+		go = { "gofumpt", "golines" },
 		lua = { "stylua" },
 	},
 	format_on_save = formatOptions,
