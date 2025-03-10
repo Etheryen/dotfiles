@@ -57,19 +57,11 @@ require("mason-lspconfig").setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-	-- clangd = {},
-	-- pyright = {},
-	html = { filetypes = { "html", "twig", "hbs" } },
-	ts_ls = { implicitProjectConfiguration = {
-		allowJs = true,
-		checkJs = true,
-	} },
+	bashls = {},
+	clangd = {},
+	cmake = {},
 	cssls = {},
-	tailwindcss = { filetypes = { "html" } },
 	emmet_ls = {},
-	prismals = {},
-	rust_analyzer = {},
-	taplo = {},
 	gopls = {
 		filetypes = { "go", "gomod", "gowork", "gotmpl" },
 		gopls = {
@@ -93,23 +85,24 @@ local servers = {
 			},
 		},
 	},
-	powershell_es = {},
-	jdtls = {
-		-- java = {
-		-- 	format = {
-		-- 		settings = {
-		-- 			url = "/home/etheryen/.config/nvim/intellij-java-google-style.xml",
-		-- 			profile = "GoogleStyle",
-		-- 		},
-		-- 	},
-		-- },
-	},
+	html = { filetypes = { "html", "twig", "hbs" } },
+	jdtls = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false },
 		},
 	},
+	powershell_es = {},
+	prismals = {},
+	pyright = {},
+	rust_analyzer = {},
+	tailwindcss = {},
+	taplo = {},
+	ts_ls = { implicitProjectConfiguration = {
+		allowJs = true,
+		checkJs = true,
+	} },
 }
 
 -- Setup neovim lua configuration
@@ -124,6 +117,7 @@ local mason_lspconfig = require("mason-lspconfig")
 
 mason_lspconfig.setup({
 	ensure_installed = vim.tbl_keys(servers),
+	automatic_installation = true,
 })
 
 local function has_value(tab, val)
@@ -142,16 +136,6 @@ local ih_servers = {
 
 mason_lspconfig.setup_handlers({
 	function(server_name)
-		-- if server_name == "jdtls" then
-		-- 	require("lspconfig").jdtls.setup({
-		-- 		cmd = { "jdtls" },
-		-- 		root_dir = function(fname)
-		-- 			return require("lspconfig.util").root_pattern(".git", "pom.xml", "build.gradle")(fname)
-		-- 				or require("lspconfig.util").path.dirname(fname)
-		-- 		end,
-		-- 	})
-		-- 	return
-		-- end
 		require("lspconfig")[server_name].setup({
 			capabilities = capabilities,
 			on_attach = function(c, b)

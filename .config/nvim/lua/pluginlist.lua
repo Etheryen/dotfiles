@@ -139,14 +139,6 @@ return {
 		opts = {},
 	},
 
-	-- {
-	-- 	"nvim-tree/nvim-tree.lua",
-	-- 	version = "*",
-	-- 	dependencies = {
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 	},
-	-- },
-
 	{
 		"stevearc/oil.nvim",
 		-- Optional dependencies

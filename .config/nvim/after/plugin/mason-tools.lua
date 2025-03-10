@@ -1,11 +1,14 @@
 require("mason-tool-installer").setup({
 	ensure_installed = {
-		"prettierd",
-		"stylua",
-		"eslint_d",
+		-- Linters
 		"codespell",
+		"eslint_d",
+		"golangci-lint",
+
+		-- Formatters
 		"gofumpt",
 		"golines",
-		"golangci-lint",
+		"prettierd",
+		"stylua",
 	},
 })

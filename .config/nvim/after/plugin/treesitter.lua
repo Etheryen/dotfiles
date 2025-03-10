@@ -7,6 +7,11 @@ vim.defer_fn(function()
 		ensure_installed = {
 			"c",
 			"cpp",
+			"cmake",
+			"ninja",
+			"make",
+			"just",
+			"java",
 			"go",
 			"lua",
 			"python",
