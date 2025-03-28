@@ -1,12 +1,20 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
+	cpp = { "cpplint" },
 	typescript = { "eslint_d" },
 	javascript = { "eslint_d" },
 	typescriptreact = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
 	go = { "golangcilint" },
 	["*"] = { "codespell" },
+}
+
+lint.linters.cpplint.args = {
+	"--filter=-legal/copyright,-whitespace/comments,-whitespace/indent_namespace",
+	function()
+		return vim.api.nvim_buf_get_name(0)
+	end,
 }
 
 lint.linters.eslint_d.args = (function()
