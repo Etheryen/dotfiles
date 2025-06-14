@@ -1,5 +1,4 @@
 {
-    "diagnostics.globals": [
-        "GLOBAL_COLORSCHEME"
-    ]
+  "diagnostics.globals": ["GLOBAL_COLORSCHEME", "vim"]
 }
+

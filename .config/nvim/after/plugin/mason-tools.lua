@@ -9,6 +9,7 @@ require("mason-tool-installer").setup({
 		-- Formatters
 		"gofumpt",
 		"golines",
+		"google-java-format",
 		"prettierd",
 		"stylua",
 	},

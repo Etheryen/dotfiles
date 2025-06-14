@@ -11,7 +11,7 @@ lint.linters_by_ft = {
 }
 
 lint.linters.cpplint.args = {
-	"--filter=-legal/copyright,-whitespace/comments,-whitespace/indent_namespace",
+	"--filter=-legal/copyright,-whitespace/comments,-whitespace/indent_namespace,-build/include_subdir,-build/namespaces,-build/c++17,-readability/alt_tokens,-whitespace/indent,-whitespace/braces",
 	function()
 		return vim.api.nvim_buf_get_name(0)
 	end,

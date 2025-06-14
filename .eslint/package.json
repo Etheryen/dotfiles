@@ -2,5 +2,12 @@
   "dependencies": {
     "@eslint/js": "^9.10.0",
     "globals": "^15.9.0"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0"
   }
 }

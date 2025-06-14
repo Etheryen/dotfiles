@@ -26,6 +26,7 @@ conform.setup({
 		markdown = { "prettierd" },
 		go = { "gofumpt", "golines" },
 		lua = { "stylua" },
+		java = { "google-java-format" },
 	},
 	format_on_save = formatOptions,
 })

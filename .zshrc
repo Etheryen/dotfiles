@@ -31,33 +31,19 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# nvm 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# nvm end
-
-# pnpm
-export PNPM_HOME="/home/etheryen/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # Fix git fd 14 issue
 unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 # Custom aliases
-alias vim=nvim
+alias vim="nvim"
 alias cat="bat --paging=never"
 alias ls="eza --icons --git"
 alias ll="eza -a -l --icons --git --git-repos"
-alias l=ll
+alias l="ll"
 alias llt="eza -1 --icons --tree --git-ignore"
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
-alias u="sudo dnf update -y && rustup update"
 alias hollywood="docker run --rm -it bcbcarl/hollywood"
 
+alias u="sudo dnf update -y && sudo flatpak upgrade -y && rustup update && sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update"
 alias bills="bills --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"

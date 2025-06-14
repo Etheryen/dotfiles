@@ -87,6 +87,7 @@ local servers = {
 	},
 	html = { filetypes = { "html", "twig", "hbs" } },
 	jdtls = {},
+	-- ["just-lsp"] = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
