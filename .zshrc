@@ -45,5 +45,9 @@ alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=a
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias hollywood="docker run --rm -it bcbcarl/hollywood"
 
-alias u="sudo dnf update -y && sudo flatpak upgrade -y && rustup update && sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update"
+alias u="sudo dnf update -y && sudo flatpak upgrade -y && sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update && rustup update"
 alias bills="bills --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
+
+PATH=~/.console-ninja/.bin:$PATH
+# opencode
+export PATH=/home/etheryen/.opencode/bin:$PATH

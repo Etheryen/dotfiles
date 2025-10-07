@@ -27,6 +27,8 @@ conform.setup({
 		go = { "gofumpt", "golines" },
 		lua = { "stylua" },
 		java = { "google-java-format" },
+		cs = { "csharpier" },
+		xml = { "csharpier" },
 	},
 	format_on_save = formatOptions,
 })

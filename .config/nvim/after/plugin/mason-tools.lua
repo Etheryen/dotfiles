@@ -7,6 +7,7 @@ require("mason-tool-installer").setup({
 		"golangci-lint",
 
 		-- Formatters
+		"csharpier",
 		"gofumpt",
 		"golines",
 		"google-java-format",

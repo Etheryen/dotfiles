@@ -24,6 +24,8 @@ vim.defer_fn(function()
 			"vim",
 			"bash",
 			"prisma",
+			"c_sharp",
+			"xml",
 		},
 
 		-- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)

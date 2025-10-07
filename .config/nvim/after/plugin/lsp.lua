@@ -94,6 +94,7 @@ local servers = {
 			telemetry = { enable = false },
 		},
 	},
+	omnisharp = {},
 	powershell_es = {},
 	prismals = {},
 	pyright = {},
