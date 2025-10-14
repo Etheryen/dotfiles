@@ -172,8 +172,6 @@ return {
 	-- 	},
 	-- },
 
-	"christoomey/vim-tmux-navigator",
-
 	{ "simrat39/inlay-hints.nvim", opts = {} },
 
 	require("colorscheme"),

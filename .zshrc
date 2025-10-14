@@ -51,3 +51,8 @@ alias bills="bills --header \"# Faktura\" --file ~/SyncThingFedora/ŁukaszCiwoni
 PATH=~/.console-ninja/.bin:$PATH
 # opencode
 export PATH=/home/etheryen/.opencode/bin:$PATH
+
+
+# JAVA 8
+alias java8="/usr/lib/jvm/temurin-8-jdk/bin/java"
+alias javac8="/usr/lib/jvm/temurin-8-jdk/bin/javac"
