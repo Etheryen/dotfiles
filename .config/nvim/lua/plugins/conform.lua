@@ -23,7 +23,12 @@ return {
 	opts = {
 		formatters = { golines = { prepend_args = { "-m", "80" } } },
 		formatters_by_ft = formatters_by_ft,
-		format_on_save = { lsp_fallback = true, timeout_ms = 1000 },
+		format_on_save = function(bufnr)
+			if vim.bo[bufnr].filetype == "java" then
+				return
+			end
+			return { lsp_fallback = true, timeout_ms = 1000 }
+		end,
 		notify_on_error = false,
 	},
 }

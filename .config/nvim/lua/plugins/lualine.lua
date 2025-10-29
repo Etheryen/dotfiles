@@ -1,7 +1,18 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = "nvim-tree/nvim-web-devicons",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
+		options = {
+			globalstatus = true,
+			-- component_separators = { left = "", right = "" },
+			-- section_separators = { left = "", right = "" },
+			-- section_separators = "",
+			-- component_separators = "⧸",
+			-- section_separators = "",
+			-- component_separators = "│",
+			section_separators = "",
+			component_separators = "",
+		},
 		sections = {
 			lualine_a = { { "mode", padding = 2 } },
 			lualine_b = {

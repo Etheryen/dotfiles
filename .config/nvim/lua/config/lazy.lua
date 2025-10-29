@@ -43,6 +43,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("highlight-on-yank", { clear = true }),
+	callback = function()
+		vim.hl.on_yank({ higroup = "Visual", timeout = 125, on_visual = false })
+	end,
+})
+
 -- Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
