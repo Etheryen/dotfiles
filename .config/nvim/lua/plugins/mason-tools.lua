@@ -6,6 +6,7 @@ local ensure_installed = {
 	"golangci-lint",
 
 	-- Formatters
+	"black",
 	"csharpier",
 	"gofumpt",
 	"golines",

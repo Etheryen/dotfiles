@@ -15,6 +15,7 @@ local formatters_by_ft = {
 	java = { "google-java-format" },
 	cs = { "csharpier" },
 	xml = { "csharpier" },
+	python = { "black" },
 }
 
 return {
