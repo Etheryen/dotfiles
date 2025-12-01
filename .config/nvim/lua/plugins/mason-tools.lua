@@ -4,6 +4,7 @@ local ensure_installed = {
 	"codespell",
 	"eslint_d",
 	"golangci-lint",
+	"ruff",
 
 	-- Formatters
 	"black",

@@ -15,14 +15,16 @@ local formatters_by_ft = {
 	java = { "google-java-format" },
 	cs = { "csharpier" },
 	xml = { "csharpier" },
-	python = { "black" },
+	python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 }
+
+local config_tweaks = { golines = { prepend_args = { "-m", "80" } } }
 
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
 	opts = {
-		formatters = { golines = { prepend_args = { "-m", "80" } } },
+		formatters = config_tweaks,
 		formatters_by_ft = formatters_by_ft,
 		format_on_save = function(bufnr)
 			if vim.bo[bufnr].filetype == "java" then

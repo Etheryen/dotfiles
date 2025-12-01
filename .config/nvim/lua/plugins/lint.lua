@@ -5,6 +5,7 @@ local linters_by_ft = {
 	typescriptreact = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
 	go = { "golangcilint" },
+	python = { "ruff" },
 	["*"] = { "codespell" },
 }
 

@@ -35,7 +35,7 @@ end)
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
-vim.keymap.set("n", "<leader>lu", "<cmd>Lazy update<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>")
 
 -- Autocmd
 vim.api.nvim_create_autocmd("LspAttach", {

@@ -7,7 +7,7 @@ return {
 	opts = {
 		defaults = {
 			mappings = { i = { ["<C-u>"] = false, ["<C-d>"] = false } },
-			file_ignore_patterns = { "target", "tmp", "vendor", "build", "obj", "bin/Debug" },
+			file_ignore_patterns = { "target", "tmp", "vendor", "build", "obj", "bin/Debug", "__pycache__", "out" },
 		},
 	},
 	init = function()
