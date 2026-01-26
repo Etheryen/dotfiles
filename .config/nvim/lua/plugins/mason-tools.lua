@@ -1,7 +1,7 @@
 local ensure_installed = {
 	-- Linters
-	"cpplint",
 	"codespell",
+	"cpplint",
 	"eslint_d",
 	"golangci-lint",
 	"ruff",

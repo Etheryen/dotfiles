@@ -1,7 +1,6 @@
 local servers = {
 	"bashls",
 	"clangd",
-	"cmake",
 	"cssls",
 	"emmet_ls",
 	"gopls",
@@ -58,6 +57,8 @@ local config_tweaks = {
 			},
 		},
 	},
+	-- TODO: check if this works
+	clangd = { cmd = { "clangd", "--query-driver=/usr/bin/clang++", "--compile-commands-dir=build" } },
 }
 
 return {
