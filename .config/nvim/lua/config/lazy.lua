@@ -1,24 +1,23 @@
 -- Options
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.opt.tabstop = 4
-vim.opt.relativenumber = true
--- vim.opt.winborder = "rounded"
-vim.opt.shiftwidth = 4
-vim.opt.colorcolumn = "80"
-vim.opt.hlsearch = false
-vim.opt.number = true
-vim.opt.mouse = "a"
-vim.opt.clipboard = "unnamedplus"
 vim.opt.breakindent = true
-vim.opt.undofile = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.wo.signcolumn = "yes"
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 500
+vim.opt.clipboard = "unnamedplus"
+vim.opt.colorcolumn = "80"
 vim.opt.completeopt = "menuone,noselect"
+vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.mouse = "a"
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.smartcase = true
+vim.opt.tabstop = 4
 vim.opt.termguicolors = true
+vim.opt.timeoutlen = 500
+vim.opt.undofile = true
+vim.opt.updatetime = 250
+vim.wo.signcolumn = "yes"
 
 -- Keymaps
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
@@ -38,13 +37,6 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>")
 
 -- Autocmd
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("my.lsp", {}),
-	callback = function(args)
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = args.buf })
-	end,
-})
-
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("highlight-on-yank", { clear = true }),
 	callback = function()

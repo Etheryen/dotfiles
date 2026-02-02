@@ -1,11 +1,11 @@
 local linters_by_ft = {
 	cpp = { "cpplint" },
-	typescript = { "eslint_d" },
-	javascript = { "eslint_d" },
-	typescriptreact = { "eslint_d" },
-	javascriptreact = { "eslint_d" },
 	go = { "golangcilint" },
+	javascript = { "eslint_d" },
+	javascriptreact = { "eslint_d" },
 	python = { "ruff" },
+	typescript = { "eslint_d" },
+	typescriptreact = { "eslint_d" },
 	["*"] = { "codespell" },
 }
 
