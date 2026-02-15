@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/home/etheryen/.config/autostart/startup.sh
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name=Startup Script
-Comment=Runs my startup script

@@ -1,6 +1,6 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-# Pure Prompt preset
+add_newline = false
 
 format = """
 $username\
@@ -10,7 +10,6 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
 $python\
 $character"""
 
