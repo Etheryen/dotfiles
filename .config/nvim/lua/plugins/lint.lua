@@ -6,7 +6,6 @@ local linters_by_ft = {
 	python = { "ruff" },
 	typescript = { "eslint_d" },
 	typescriptreact = { "eslint_d" },
-	["*"] = { "codespell" },
 }
 
 local custom_args = {
