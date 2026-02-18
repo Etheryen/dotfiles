@@ -9,4 +9,5 @@ for file in ~/.bash-custom-scripts/*.sh; do
 done
 
 # --- Starship prompt ---
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
+PS1="\e[90m\w\e[0m\n\e[34m$\e[0m "
