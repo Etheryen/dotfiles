@@ -10,6 +10,6 @@ return {
 		float = { solid = true, transparent = false },
 	},
 	init = function()
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("catppuccin-nvim")
 	end,
 }

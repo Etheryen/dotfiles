@@ -1,0 +1,17 @@
+[general]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+# [window]
+# decorations = "None"
+
+[selection]
+save_to_clipboard = true
+
+[font]
+normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
+size = 10
+# normal = { family = "PxPlus IBM VGA 9x16", style = "Regular" }
+# size = 10
+
+[env]
+TERM = "xterm-256color"

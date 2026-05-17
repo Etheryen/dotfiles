@@ -58,7 +58,7 @@ local config_tweaks = {
 		},
 	},
 	-- TODO: check if this works
-	clangd = { cmd = { "clangd", "--query-driver=/usr/bin/clang++", "--compile-commands-dir=build" } },
+	-- clangd = { cmd = { "clangd", "--query-driver=/usr/bin/clang++", "--compile-commands-dir=build" } },
 }
 
 return {

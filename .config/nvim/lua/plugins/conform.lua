@@ -1,5 +1,5 @@
 local formatters_by_ft = {
-	cs = { "csharpier" },
+	-- cs = { "csharpier" },
 	css = { "prettierd" },
 	go = { "gofumpt", "golines" },
 	graphql = { "prettierd" },
@@ -14,7 +14,7 @@ local formatters_by_ft = {
 	python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 	typescript = { "prettierd" },
 	typescriptreact = { "prettierd" },
-	xml = { "csharpier" },
+	-- xml = { "csharpier" },
 	yaml = { "prettierd" },
 }
 

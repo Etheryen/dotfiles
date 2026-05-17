@@ -8,7 +8,7 @@ local ensure_installed = {
 
 	-- Formatters
 	"black",
-	"csharpier",
+	-- "csharpier",
 	"gofumpt",
 	"golines",
 	"google-java-format",
