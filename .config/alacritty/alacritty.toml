@@ -8,9 +8,9 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 save_to_clipboard = true
 
 [font]
-normal = { family = "IosevkaTerm Nerd Font", style = "Regular" }
+normal = { family = "IosevkaTerm Nerd Font" }
 size = 10
-# normal = { family = "MxPlus IBM VGA 8x16", style = "Regular" }
+# normal = { family = "MxPlus IBM VGA 8x16" }
 # size = 10
 bold = { style = "Regular" }
 italic = { style = "Regular" }
