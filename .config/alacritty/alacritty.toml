@@ -10,8 +10,8 @@ save_to_clipboard = true
 [font]
 normal = { family = "IosevkaTerm Nerd Font" }
 size = 10
-# normal = { family = "MxPlus IBM VGA 8x16" }
-# size = 10
+# normal = { family = "BmPlus IBM VGA 8x16" }
+# size = 6
 bold = { style = "Regular" }
 italic = { style = "Regular" }
 bold_italic = { style = "Regular" }
