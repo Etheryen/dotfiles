@@ -17,10 +17,7 @@ export PATH="$PATH:$HOME/opt/bin:$HOME/.npm-global/bin"
 # --- DOTNET ---
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
-
-# Temporary dotnet8
-# export DOTNET_ROOT=$HOME/dotnet8
-# export PATH=$HOME/dotnet8:$PATH
+export PATH=$PATH:$HOME/.dotnet/tools
 # --- DOTNET ---
 
 alias ls='ls --color=auto'

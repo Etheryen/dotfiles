@@ -8,13 +8,24 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 save_to_clipboard = true
 
 [font]
-normal = { family = "IosevkaTerm Nerd Font" }
-size = 10
-# normal = { family = "BmPlus IBM VGA 8x16" }
-# size = 6
+# normal = { family = "Iosevka" }
+# size = 16
+# normal = { family = "BmPlus IBM VGA 9x16" }
+# size = 10
+# normal = { family = "MxPlus IBM VGA 9x16" }
+# size = 13.5
+# normal = { family = "AcPlus IBM VGA 9x16" }
+# size = 16
+normal = { family = "Monocraft" }
+size = 13.5
+# size = 27
+# normal = { family = "Miracode" }
+# size = 14
+
 bold = { style = "Regular" }
 italic = { style = "Regular" }
 bold_italic = { style = "Regular" }
 
 [env]
 TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1"
