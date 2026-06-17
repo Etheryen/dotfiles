@@ -16,12 +16,20 @@ save_to_clipboard = true
 # size = 13.5
 # normal = { family = "AcPlus IBM VGA 9x16" }
 # size = 16
-normal = { family = "Monocraft" }
-size = 13.5
-# size = 27
+# normal = { family = "Monocraft" }
+# size = 13.5
 # normal = { family = "Miracode" }
 # size = 14
+normal = { family = "Cozette" }
+size = 15
+# normal = { family = "Departure Mono" }
+# size = 15
+# normal = { family = "Terminus" }
+# size = 20
+# normal = { family = "CozetteVector" }
+# size = 16
 
+# regular = { style = "Bold" }
 bold = { style = "Regular" }
 italic = { style = "Regular" }
 bold_italic = { style = "Regular" }
