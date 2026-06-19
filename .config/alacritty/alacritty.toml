@@ -1,5 +1,7 @@
 [general]
 import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+# import = ["~/.config/alacritty/gruvbox-dark.toml"]
+# import = ["~/.config/alacritty/gruber-darker.toml"]
 
 # [window]
 # decorations = "None"
