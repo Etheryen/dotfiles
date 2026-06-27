@@ -3,6 +3,7 @@ return {
 	-- dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		options = {
+			icons_enabled = false,
 			globalstatus = true,
 			-- component_separators = { left = "", right = "" },
 			-- section_separators = { left = "", right = "" },
@@ -27,6 +28,9 @@ return {
 					cond = require("lazy.status").has_updates,
 					color = { fg = "#ff9e64" },
 					padding = 2,
+					fmt = function(str)
+						return "updates: " .. str:sub(5)
+					end,
 				},
 				{ "encoding", padding = 2 },
 				{ "fileformat", padding = 2 },

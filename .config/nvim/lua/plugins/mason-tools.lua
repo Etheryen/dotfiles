@@ -1,18 +1,20 @@
 local ensure_installed = {
 	-- Linters
-	"codespell",
+	-- "codespell",
 	"cpplint",
-	"eslint_d",
-	"golangci-lint",
-	"ruff",
+	-- "eslint_d",
+	-- "golangci-lint",
+	-- "ruff",
+	"statix",
 
 	-- Formatters
-	"black",
+	"alejandra",
+	-- "black",
 	-- "csharpier",
-	"gofumpt",
-	"golines",
-	"google-java-format",
-	"prettierd",
+	-- "gofumpt",
+	-- "golines",
+	-- "google-java-format",
+	-- "prettierd",
 	"stylua",
 }
 

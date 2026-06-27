@@ -10,10 +10,6 @@ export VISUAL="nvim"
 export MANPAGER="nvim +Man!"
 export PATH="$PATH:$HOME/opt/bin:$HOME/.npm-global/bin"
 
-# --- JAVA ---
-. /etc/profile.d/jdk.sh
-# --- JAVA ---
-#
 # --- DOTNET ---
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
@@ -23,13 +19,16 @@ export PATH=$PATH:$HOME/.dotnet/tools
 alias ls='ls --color=auto'
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
-alias u="sudo xbps-install -Su"
+alias u="sudo nixos-rebuild switch --upgrade"
 alias bills="bills \"# Faktura\" ~/SyncthingVoid/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
 
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
 alias from="pwd | copy"
 alias to='cd $(paste)'
+
+alias ne="sudo nvim /etc/nixos/configuration.nix"
+alias nr="sudo nixos-rebuild switch"
 
 br() {
   brightnessctl set "$1%"
