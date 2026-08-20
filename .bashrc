@@ -20,14 +20,14 @@ alias ls='ls --color=auto'
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias u="sudo nixos-rebuild switch --upgrade"
-alias bills="bills \"# Faktura\" ~/SyncthingVoid/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
+alias bills="bills \"# Faktura\" ~/SyncthingNixOS/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
 
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -o"
 alias from="pwd | copy"
 alias to='cd $(paste)'
 
-alias ne="sudo nvim /etc/nixos/configuration.nix"
+alias ne="nvim ~/dotfiles/configuration.nix"
 alias nr="sudo nixos-rebuild switch"
 
 br() {
@@ -50,5 +50,5 @@ prompt_symbol() {
   fi
 }
 
-# PS1='[\u@\h \W]\$ ' # <- DEFAULT
-PS1='\e[97m\w\e[0m $(prompt_symbol) '
+PS1='[\u@\h \W]\$ ' # <- DEFAULT
+# PS1='\e[97m\w\e[0m $(prompt_symbol) '

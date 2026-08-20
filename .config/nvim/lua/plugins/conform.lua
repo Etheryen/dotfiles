@@ -11,6 +11,7 @@ local formatters_by_ft = {
 	jsonc = { "prettierd" },
 	lua = { "stylua" },
 	markdown = { "prettierd" },
+	nix = { "alejandra" },
 	python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 	typescript = { "prettierd" },
 	typescriptreact = { "prettierd" },

@@ -3,6 +3,7 @@ local linters_by_ft = {
 	go = { "golangcilint" },
 	javascript = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
+	nix = { "statix" },
 	python = { "ruff" },
 	typescript = { "eslint_d" },
 	typescriptreact = { "eslint_d" },

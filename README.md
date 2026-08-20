@@ -8,9 +8,13 @@ Run this in `~/dotfiles`:
 stow . -v
 ```
 
-And for nixos setup:
+And for nixos setup, make this your system `/etx/nixos/configuration.nix`:
 
-```sh
-sudo rm /etc/nixos/configuration.nix
-sudo ln -s ~/dotfiles/configuration.nix /etc/nixos/configuration.nix
+```nix
+{
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    /home/etheryen/dotfiles/configuration.nix
+  ];
+}
 ```

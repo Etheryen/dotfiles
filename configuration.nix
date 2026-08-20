@@ -1,11 +1,13 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports = [ ./hardware-configuration.nix ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -27,18 +29,16 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
-
+  services.pipewire = {
+    enable = true;
+    # pulse.enable = true;
+  };
 
   services.xserver.displayManager.lightdm.enable = false;
   services.displayManager.enable = false;
@@ -52,7 +52,6 @@
       autoRepeatInterval = 35;
       windowManager.i3.enable = true;
       xkb.layout = "pl";
-
     };
     # displayManager.ly.enable = true;
 
@@ -70,7 +69,7 @@
 
   users.users.etheryen = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = ["wheel"];
     packages = with pkgs; [
       tree
     ];
@@ -78,16 +77,17 @@
 
   programs.firefox.enable = true;
 
-
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "obsidian"
-  ];
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "obsidian"
+    ];
 
   environment.systemPackages = with pkgs; [
     # Basics
     git
     vim
     wget
+    file
     zip
     unzip
 
@@ -100,6 +100,7 @@
     fd
     fzf
     ripgrep
+    emacs
 
     # Terminal
     alacritty
@@ -110,6 +111,7 @@
     flameshot
     feh
     xss-lock
+    htop
 
     # C stuff
     gcc
@@ -117,19 +119,27 @@
     binutils
     gnumake
 
+    # Other code
+    guile
+    ghc
+
     # Display
     brightnessctl
     redshift
+    picom
 
     # Notes
     obsidian
 
     # Larp
     fastfetch
-
+    polybar
+    
     # Passwords
     # bitwarden-desktop
-    polybar
+
+    # Emulation
+    qemu
   ];
 
   fonts = {
@@ -155,8 +165,8 @@
   # Dynamic libraries fix
   programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
+  # Add any missing dynamic libraries for unpackaged programs
+  # here, NOT in environment.systemPackages
   # ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -202,6 +212,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
-
