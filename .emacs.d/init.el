@@ -19,7 +19,7 @@
 
 ; (set-frame-font "Cozette")
 ; (set-frame-font "MxPlus IBM VGA 9x16-18")
-(set-frame-font "Iosevka-16")
+(set-frame-font "Iosevka-15")
 ; (set-frame-font "DepartureMono-14")
 
 ;; Completion for M-x

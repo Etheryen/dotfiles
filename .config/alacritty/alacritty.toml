@@ -1,5 +1,6 @@
 [general]
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = ["~/.config/alacritty/modus-vivendi.toml"]
+# import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 # import = ["~/.config/alacritty/gruvbox-dark.toml"]
 # import = ["~/.config/alacritty/gruber-darker.toml"]
 
@@ -10,8 +11,8 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 save_to_clipboard = true
 
 [font]
-# normal = { family = "Iosevka" }
-# size = 16
+normal = { family = "Iosevka" }
+size = 15
 # normal = { family = "BmPlus IBM VGA 9x16" }
 # size = 10
 # normal = { family = "MxPlus IBM VGA 9x16" }
@@ -22,8 +23,8 @@ save_to_clipboard = true
 # size = 13.5
 # normal = { family = "Miracode" }
 # size = 14
-normal = { family = "Cozette" }
-size = 15
+# normal = { family = "Cozette" }
+# size = 15
 # normal = { family = "Departure Mono" }
 # size = 15
 # normal = { family = "Terminus" }

@@ -134,7 +134,7 @@
     # Larp
     fastfetch
     polybar
-    
+
     # Passwords
     # bitwarden-desktop
 
