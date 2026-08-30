@@ -6,8 +6,12 @@
   lib,
   pkgs,
   ...
-}: {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+}:
+{
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -46,7 +50,6 @@
   services = {
     xserver = {
       enable = true;
-      # autorun = false;
       displayManager.startx.enable = true;
       autoRepeatDelay = 200;
       autoRepeatInterval = 35;
@@ -55,21 +58,33 @@
     };
     # displayManager.ly.enable = true;
 
-    libinput = {
-      # enable = true;
-      touchpad = {
-        naturalScrolling = true;
-        tapping = false;
-      };
+    libinput.touchpad = {
+      naturalScrolling = true;
+      tapping = false;
     };
 
     chrony.enable = true;
     fwupd.enable = true;
+
+    udev.extraRules = ''
+      SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="${pkgs.writeShellScript "on-battery" ''
+        export DISPLAY=:0
+        export XAUTHORITY=/home/etheryen/.Xauthority
+        /run/wrappers/bin/su etheryen -c "${pkgs.xset}/bin/xset dpms 600 600 600"
+        /run/wrappers/bin/su etheryen -c "${pkgs.xset}/bin/xset s 600 600"
+      ''}"
+      SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="${pkgs.writeShellScript "on-ac" ''
+        export DISPLAY=:0
+        export XAUTHORITY=/home/etheryen/.Xauthority
+        /run/wrappers/bin/su etheryen -c "${pkgs.xset}/bin/xset -dpms"
+        /run/wrappers/bin/su etheryen -c "${pkgs.xset}/bin/xset s off"
+      ''}"
+    '';
   };
 
   users.users.etheryen = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
       tree
     ];
@@ -77,7 +92,8 @@
 
   programs.firefox.enable = true;
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
     builtins.elem (lib.getName pkg) [
       "obsidian"
     ];
@@ -101,32 +117,39 @@
     fzf
     ripgrep
     emacs
-
-    # Terminal
     alacritty
 
     # Misc
+    brightnessctl
+    feh
+    flameshot
+    htop
+    picom
+    redshift
     stow
     xclip
-    flameshot
-    feh
     xss-lock
-    htop
 
-    # C stuff
+    # C
     gcc
     clang
     binutils
     gnumake
+    clang-tools
+    gdb
 
-    # Other code
-    guile
+    # Go
+    go
+
+    # Python
+    uv
+    pyright
+
+    # Nix
+    nil
+
+    # Haskell
     ghc
-
-    # Display
-    brightnessctl
-    redshift
-    picom
 
     # Notes
     obsidian
@@ -197,7 +220,7 @@
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #
-  # Most users should NEVER change this value after the initial install, for any reason,
+  # users should NEVER change this value after the initial install, for any reason,
   # even if you've upgraded your system to a new NixOS release.
   #
   # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
