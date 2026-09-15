@@ -52,11 +52,13 @@
       enable = true;
       displayManager.startx.enable = true;
       autoRepeatDelay = 200;
-      autoRepeatInterval = 35;
+      autoRepeatInterval = 1000 / 35; # Interval to repeat rate
       windowManager.i3.enable = true;
       xkb.layout = "pl";
     };
     # displayManager.ly.enable = true;
+
+    picom.enable = true;
 
     libinput.touchpad = {
       naturalScrolling = true;
@@ -175,6 +177,8 @@
       departure-mono
       terminus_font
       ultimate-oldschool-pc-font-pack
+      aporetic
+      ioskeley-mono.normal
     ];
   };
 

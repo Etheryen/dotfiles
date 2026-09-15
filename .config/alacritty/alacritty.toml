@@ -4,8 +4,9 @@ import = ["~/.config/alacritty/modus-vivendi.toml"]
 # import = ["~/.config/alacritty/gruvbox-dark.toml"]
 # import = ["~/.config/alacritty/gruber-darker.toml"]
 
-# [window]
+[window]
 # decorations = "None"
+opacity = 0.9
 
 [selection]
 save_to_clipboard = true

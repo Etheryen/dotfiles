@@ -7,15 +7,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export TERMINAL="alacritty"
 export EDITOR="emacs"
 export VISUAL="emacs"
-export PATH="$PATH:$HOME/opt/bin:$HOME/.npm-global/bin"
+export PATH="$PATH:$HOME/opt/bin"
 
-# --- DOTNET ---
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-export PATH=$PATH:$HOME/.dotnet/tools
-# --- DOTNET ---
-
-alias ls='ls --color=auto'
+alias ls="ls --color=auto"
 alias search="fd --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias gsearch="fd . / --type f --hidden --exclude .git | fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
 alias bills="bills \"# Faktura\" ~/SyncthingNixOS/ŁukaszCiwoniuk/_Important/Rozliczenia.md"
