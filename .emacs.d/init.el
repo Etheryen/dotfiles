@@ -22,6 +22,7 @@
 ;;    '((python . t)
 ;;      (C . t))))
 
+(use-package markdown-mode :ensure t)
 
 (setq use-short-answers t) ; yes-or-no to y-or-n
 
@@ -35,7 +36,7 @@
 
 (setq ring-bell-function 'ignore)
 
-(load-theme 'modus-vivendi t)
+(load-theme 'modus-vivendi-deuteranopia t)
 
 ;; (set-frame-font "Cozette-15")
 ;; (set-frame-font "MxPlus IBM VGA 9x16-18")

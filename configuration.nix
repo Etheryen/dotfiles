@@ -112,7 +112,6 @@
     # Workflow
     neovim
     nodejs
-    python3
     cargo
     tree-sitter
     fd
@@ -144,6 +143,14 @@
     go
 
     # Python
+    (python3.withPackages (ps: with ps; [
+      matplotlib
+      # numpy
+      # scipy
+      # pandas
+      # sympy
+      # ipython
+    ]))
     uv
     pyright
 
