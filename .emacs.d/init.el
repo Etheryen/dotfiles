@@ -92,6 +92,10 @@
 ;; Nix
 (use-package nix-mode :ensure t)
 
+;; Python
+(with-eval-after-load 'python
+  (define-key python-mode-map (kbd "C-c C-r") nil))
+
 ;; Search
 (defun my-search-grep (name)
   (interactive "sGrep: ")
